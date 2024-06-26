@@ -78,7 +78,7 @@ with open('new_secrets.csv', 'w') as new_secrets_file:
 #
 Task 17
 We want The Firewall to believe that Phantom Ghost is behind this operation. Phantom Ghost leaves a signature in the files he modifies. Define this signature:
-phantom_ghost_sig = 
+phantom_ghost_sig = """
 / )( \   / __) /  \(_  _)            
 ) \/ (  ( (_ \(  O ) )(              
 \____/   \___/ \__/ (__)             
@@ -94,6 +94,7 @@ phantom_ghost_sig =
 (  ( \/ )( \(  )  (  )               
 /    /) \/ (/ (_/\/ (_/\             
 \_)__)\____/\____/\____/
+"""
 #
 Task 18
 Write phantom_ghost_sig to 'new_secrets_file':
