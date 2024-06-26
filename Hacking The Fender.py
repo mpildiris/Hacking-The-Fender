@@ -2,7 +2,6 @@ import csv
 import json
 
 
-
 compromised_users = []
 with open('passwords.csv') as password_file:
   password_csv = csv.DictReader(password_file)
@@ -12,8 +11,6 @@ with open('passwords.csv') as password_file:
 with open('compromised_users.txt', 'w') as compromised_users_file:
   for user in compromised_users:
     compromised_users_file.write(user + '\n')
-
-
 
 with open('boss_message.json','w') as boss_message:
   boss_message_dict = {}
@@ -50,18 +47,13 @@ with open('new_passwords.csv', 'r') as new_passwords_obj:
 
 # Task 19 copy the contents of the new passwords file into the old passwords file
 
-
-
-
-
 with open('new_passwords.csv') as new_passwords_csv:
   content = new_passwords_csv.read()
-
 
 with open('passwords.csv','w') as password_csv:
   password_csv.write(content)
 
-#Now because we overwrite the old file passwords.csv an error will occur from earlier topics :    compromised_users.append(password_row['Username'])KeyError: 'Username'
+# **Now because we overwrite the old file passwords.csv an error will occur from earlier topics :    compromised_users.append(password_row['Username'])KeyError: 'Username'
 
 
 
